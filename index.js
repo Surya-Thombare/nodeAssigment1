@@ -1,13 +1,13 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from "cors";
-import {InitiateMongoServer} from "./auth/db.js";
+import {InitiateMongoServer} from "./src/auth/db.js";
 
-import indexRouter from './routes/index.js';
-import registerUser from './routes/register.js';
+import indexRouter from './src/routes/index.js';
+import registerUser from './src/routes/register.js';
 // const loginUser = require('./routes/user/login');
-import Fav from './routes/fav.js'
-import health from "./routes/health.js";
+import Fav from './src/routes/fav.js'
+import health from "./src/routes/health.js";
 
 
 let app = express();

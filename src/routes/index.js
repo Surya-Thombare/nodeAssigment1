@@ -1,9 +1,9 @@
 // import { Router } from 'express';
 import { Router } from 'express';
 const  router = Router();
-import Country from "../../model/countries.js";
+import Country from "../model/countries.js";
 import Joi from "@hapi/joi";
-import db from "../../auth/db.js";
+import db from "../auth/db.js";
 import moment from 'moment';
 
 // router.get('/home', (req, res) => {

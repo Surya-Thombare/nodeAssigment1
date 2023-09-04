@@ -2,7 +2,7 @@
 import { Router } from 'express';
 import mongoose from "mongoose";
 const  router = Router();
-import db from "../../auth/db.js";
+import db from "../auth/db.js";
 import Fav from "../model/fav.js";
 
 router.post('/fav',async (req, res) => {
