@@ -2,7 +2,7 @@
 import { Router } from 'express';
 const  router = Router();
 import Country from "../model/countries.js";
-import Joi from "@hapi/joi";
+import Joi from "joi";
 import db from "../auth/db.js";
 import moment from 'moment';
 

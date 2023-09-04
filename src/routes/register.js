@@ -1,7 +1,7 @@
 import { Router } from 'express';
 var router = Router();
 import User from "../model/user.js";
-import Joi from "@hapi/joi";
+import Joi from "joi";
 
 const validateUser = (data) => {
     const schema = Joi.object({
