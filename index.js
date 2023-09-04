@@ -1,7 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from "cors";
-import path from 'path';
 import {InitiateMongoServer} from "./auth/db.js";
 
 import indexRouter from './routes/index.js';

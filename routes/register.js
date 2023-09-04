@@ -1,13 +1,7 @@
-// var {Router} = require('express');
 import { Router } from 'express';
 var router = Router();
-import mongoose from "mongoose";
-import User from "../model/user";
-// import pkg from 'joi';
-// const { string, validate } = pkg;
+import User from "../model/user.js";
 import Joi from "@hapi/joi";
-
-
 
 const validateUser = (data) => {
     const schema = Joi.object({
@@ -18,12 +12,9 @@ const validateUser = (data) => {
         password: Joi.string().min(5).max(20).required(),
     });
     return schema.validate(data)
-    //   return validate(data, schema);
 }
 
 router.post('/', async (req, res) => {
-    await mongoose.connect('mongodb+srv://suryathombre:WoZYUSnBsgLjFTw4@cluster.ijno3qe.mongodb.net/favCart?retryWrites=true&writeConcern=majority');
-    console.log(req.body);
     const { error } = validateUser(req.body);
     if (error) return res.status(400).send(error.details[0].message);
     const user = new User({
@@ -37,7 +28,4 @@ router.post('/', async (req, res) => {
     res.send(user);
 });
 
-
-
 export default router;
-// module.exports = router;

@@ -1,11 +1,10 @@
 // import { Router } from 'express';
 import { Router } from 'express';
-import mongoose from "mongoose";
 const  router = Router();
-import Country from "../model/countries";
+import Country from "../model/countries.js";
 import Joi from "@hapi/joi";
-import db from "../auth/db";
-import moment from 'moment/moment';
+import db from "../auth/db.js";
+import moment from 'moment';
 
 // router.get('/home', (req, res) => {
 //     res.send("This is the homepage");
