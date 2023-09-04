@@ -2,7 +2,7 @@
 import { Router } from 'express';
 import mongoose from "mongoose";
 const  router = Router();
-import Fav from "../model/fav.js";
+import Fav from "../../model/fav.js";
 
 router.post('/fav',async (req, res) => {
     await mongoose.connect('mongodb+srv://suryathombre:WoZYUSnBsgLjFTw4@cluster.ijno3qe.mongodb.net/favCart?retryWrites=true&writeConcern=majority');
